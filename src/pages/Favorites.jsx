@@ -1,9 +1,14 @@
 import { useMovieContext } from '../contexts/MovieContext';
+import React, { useEffect } from 'react';
 import MovieCard from '../components/MovieCard';
 import '../../style.css';
 
 function Favorites() {
   const { favorites } = useMovieContext();
+
+  useEffect(() => {
+    document.title = "Favorites | Movies App";
+  }, []);
 
   if (favorites && favorites.length > 0) {
     return (
