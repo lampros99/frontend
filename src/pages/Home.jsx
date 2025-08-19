@@ -1,7 +1,7 @@
 import MovieCard from "../components/MovieCard";
-import FavoriteIcon from '@mui/icons-material/Favorite';
 import { useState, useEffect } from 'react';
 import { searchMovies, getPopularMovies } from "../services/api"; 
+import '../../style.css';
 
 function Home() {
     const [searchQuery, setSearchQuery] = useState('');
