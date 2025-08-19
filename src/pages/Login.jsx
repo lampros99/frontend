@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import '../../style.css';
@@ -10,6 +10,11 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const navigate = useNavigate();
+  
+
+  useEffect(() => {
+    document.title = "Login | Movies App";
+  }, [])
 
   const handleLogin = (e) => {
     e.preventDefault();
