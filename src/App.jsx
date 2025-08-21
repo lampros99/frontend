@@ -5,6 +5,7 @@ import NavBar from './components/NavBar';
 import { MovieProvider } from './contexts/MovieContext';
 import NotFoundPage from './pages/NotFoundPage';
 import ProtectedRoute from './components/ProtectedRoute';
+import Register from './pages/Register';
 import '../style.css';
 import Login from './pages/Login';
 
@@ -27,6 +28,7 @@ function App() {
               </ProtectedRoute>
               } />
             <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
             <Route path="/not-found" element={<NotFoundPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
