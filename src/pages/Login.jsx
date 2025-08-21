@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import '../../style.css';
 
@@ -85,6 +85,15 @@ const Login = () => {
       >
         Login with Google
       </button>
+      <p className="text-center mt-4 text-gray-500">
+        Don't have an account?{' '}
+       <Link 
+         to="/register" 
+         className="text-indigo-600 hover:text-indigo-800 font-semibold"
+       >
+        Sign up here
+     </Link>
+      </p>
     </form>
     </div>
   );
